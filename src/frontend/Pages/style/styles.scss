@@ -1,0 +1,351 @@
+$bg: #883f00;  
+$panel: #2d1f14; 
+$border: #b85e1a; 
+$text: #fff3e0;
+
+$primary: #ff8c42;
+$primaryBg: rgba(255, 140, 66, 0.25);
+
+$danger: #ff5757; 
+$dangerBg: rgba(255, 87, 87, 0.15);
+
+$orange-light: #ffb347;
+$orange-dark: #c4450c;
+$orange-soft: #ff9f4b;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.screen {
+    background-color: $bg;
+    width: 100vw;
+    min-width: 300px;
+    height: 100vh;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.mainpage {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header {
+    background-color: $panel;
+    color: $orange-light;
+    padding: 16px 32px;
+    width: 100%;
+    text-align: center;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+
+    &__title{
+        margin: 0 auto 0 0;
+        font-weight: 1000;
+    }
+}
+
+.main {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+.products_list {
+    width: 650px;
+    height: 450px;
+    background-color: $orange-soft;
+    padding: 30px 20px 30px 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    justify-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.title {
+    color: $text;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 10px 5px;
+    cursor: pointer;
+    
+    &--primary {
+        background-color: $primary;
+        color: $text;
+    }
+    
+    &--success {
+        background-color: $orange-soft;
+        color: $text;
+    }
+    
+    &--warning {
+        background-color: $orange-light;
+        color: $text;
+    }
+    
+    &--danger {
+        background-color: $danger;
+        color: $text;
+    }
+    
+    &--info {
+        background-color: $orange-dark;
+        color: $text;
+    }
+}
+
+.empty {
+    flex: 1;
+    text-align: center;
+    padding: 48px;
+    color: $text;
+    background-color: $panel;
+}
+
+.footer {
+    background-color: $panel;
+    padding: 16px 32px;
+    text-align: center;
+    width: 100%;
+    color: $orange-light;
+    flex-shrink: 0;
+}
+
+.input {
+    width: 200px;
+    padding: 10px 12px;
+    margin: 0;
+    background-color: $bg;
+    color: $text;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b85e1a;
+    border: 1px solid black;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+    gap: 12px;
+}
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 24px;             
+    padding: 20px;
+}
+
+.auth .toolbar {
+    width: auto;
+    min-width: 300px;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 0;    
+}
+
+.auth .form {
+    height: auto;
+    min-height: 100px;
+    width: 400px;
+    padding: 24px;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.auth-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.auth .input {
+    width: 100%;
+}
+// userslist user--card user--email user--name
+.user{
+    &--card{
+        background-color: $orange-light;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        border-radius: 15px;
+    }
+    &--email{
+        color: $orange-dark;
+        padding: 4px 12px;
+        margin: 5px 20px;
+    }
+    &--name{
+        color: $orange-dark;
+        margin-right: 20px;
+    }
+}
+
+.userslist{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+}
+
+.product {
+    &--list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-y:auto;
+        scrollbar-color: $orange-soft $orange-light;
+    }
+    
+    &--card {
+        background-color: $orange-light;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        border-radius: 15px;
+    }
+    
+    &--category {
+        color: $orange-dark;
+        padding: 4px 12px;
+        margin: 5px 20px;
+    }
+    
+    &--title {
+        color: $text;
+        margin-right: 20px;
+    }
+    
+    &--actions {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    &--info {
+        background-color: $panel;
+        padding: 24px;
+        min-width: 320px;
+        max-width: 500px;
+    }
+    
+    &--header {
+        color: $text;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+    
+    &__infoList {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+        background-color: $orange-light;
+        width: 300px;
+        padding: 15px;
+        height: 90%;
+        border: 1px solid black;
+        border-radius: 15px;
+        
+    }
+
+    &--infocategory{
+        color: $text;
+    }
+
+    &--infoprice{
+        color: $text;
+    }
+    
+    &--id {
+        color: $text;
+        margin-bottom: 8px;
+    }
+    
+    &--description {
+        color: $text;
+        margin-bottom: 8px;
+    }
+    
+    &--price {
+        color: $primary;
+    }
+    
+    &--footer {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 16px;
+    }
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bg;
+    border: 1px solid black;
+    border-radius: 15px;
+    position: fixed;
+    padding: 24px;
+    min-width: 400px;
+    z-index: 1000;
+    top: 30%;
+    left: 40%;
+    
+    &__header {
+        color: $text;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+    
+    &__footer {
+        display: flex;
+        justify-content: row;
+        padding-top: 16px;
+        margin-top: 16px;
+        gap: 10px;
+        justify-content: flex-end;
+        flex-shrink: 0;
+    }
+}
+
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
