@@ -62,9 +62,9 @@ export default function Auth({ handleAuth }) {
         <div className='auth'>
             <div className='toolbar'>
                 <button className="btn btn--primary" onClick={changeAction} disabled={isReg ? true : false}
-                    style={{ backgroundColor: isReg ? '#bd6732' : '#ff8c42' }}>Регистрация</button>
+                    style={{ backgroundColor: isReg ? '#b14400' : '#ff8c42' }}>Регистрация</button>
                 <button className="btn btn--primary" onClick={changeAction} disabled={!isReg ? true : false}
-                    style={{ backgroundColor: !isReg ? '#bd6732' : '#ff8c42' }}>Авторизация</button>
+                    style={{ backgroundColor: !isReg ? '#b14400' : '#ff8c42' }}>Авторизация</button>
             </div>
             <form onSubmit={handleSubmit} className="form">
                 {isReg ?

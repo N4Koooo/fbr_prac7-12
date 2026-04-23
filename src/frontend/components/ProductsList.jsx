@@ -1,10 +1,10 @@
 import Product from './Product';
 
-export default function ProductsList({id, products, onInfo, onEdit, onDelete }){
+export default function ProductsList({user_role, id, products, onInfo, onEdit, onDelete }){
     if(id){
         const product = products.find(p => p.id === id);
         if(product){
-            return <div className='product product--list'><Product key={product.id} product={product} onInfo={onInfo} onEdit={onEdit} onDelete={onDelete}/></div>
+            return <div className='product product--list'><Product user_role={user_role} key={product.id} product={product} onInfo={onInfo} onEdit={onEdit} onDelete={onDelete}/></div>
         }else{
             return <div className='empty'>Продукт не найден...</div>
         }
@@ -14,7 +14,7 @@ export default function ProductsList({id, products, onInfo, onEdit, onDelete }){
     }
     return (
         <div className='product product--list'>
-            { products.map(p => (<Product key={p.id} product={p} onInfo={onInfo} onEdit={onEdit} onDelete={onDelete}/>)) }
+            { products.map(p => (<Product user_role={user_role} key={p.id} product={p} onInfo={onInfo} onEdit={onEdit} onDelete={onDelete}/>)) }
             { products.map(p => console.log(`ID: ${p.id}`))}
         </div>
     );

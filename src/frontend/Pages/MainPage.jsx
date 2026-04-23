@@ -232,7 +232,7 @@ export default function MainPage() {
         <div className='screen'>
             <header className='header'>
                 <p className='header__title'>Products</p>
-                {isAuth && <button className='btn btn--primary' onClick={() => setPage('main')}>Главная страница</button>}
+                {isAuth && user.role === 'admin' && <button className='btn btn--primary' onClick={() => setPage('main')}>Главная страница</button>}
                 {isAuth && user.role === 'admin' && <button className='btn btn--primary' onClick={async () => {setPage('users'); await loadUsers();}}>Пользователи</button>}
                 {isAuth && <button className='btn btn--danger' onClick={handleQuit}>Выйти</button>}
             </header>
@@ -246,10 +246,10 @@ export default function MainPage() {
                                 <div className='toolbar'>
                                     <h1 className='title'>Продукты</h1>
                                     <input className='input' placeholder='Айди продукта' onChange={(e) => setProductId(e.target.value)} />
-                                    <button className='btn btn--primary' onClick={openCreate}>Создать</button>
+                                    {user.role !== 'user' && <button className='btn btn--primary' onClick={openCreate}>Создать</button>}
                                 </div>
                                 {
-                                    loading ? (<div className='empty'>Загрузка...</div>) : (<ProductsList id={productId} products={products} onInfo={openInfo} onEdit={openEdit} onDelete={handleDelete} />)
+                                    loading ? (<div className='empty'>Загрузка...</div>) : (<ProductsList user_role={user.role} id={productId} products={products} onInfo={openInfo} onEdit={openEdit} onDelete={handleDelete} />)
                                 }
                             </div>
                         </main>

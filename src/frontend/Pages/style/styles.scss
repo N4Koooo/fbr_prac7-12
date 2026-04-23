@@ -169,6 +169,7 @@ $orange-soft: #ff9f4b;
     min-width: 300px;
     justify-content: center;
     gap: 16px;
+    margin-top: 100px;
     margin-bottom: 0;    
 }
 
@@ -179,6 +180,7 @@ $orange-soft: #ff9f4b;
     padding: 24px;
     justify-content: flex-start;
     gap: 16px;
+    margin-bottom: auto;
 }
 
 .auth-input-group {
@@ -217,8 +219,7 @@ $orange-soft: #ff9f4b;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-
-}
+}   
 
 .product {
     &--list {
